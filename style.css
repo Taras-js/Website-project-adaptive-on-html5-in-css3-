@@ -1,42 +1,47 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
 
 }
-body, html{
-   overflow-x: hidden;
-   background-image: url(background.jpg); 
-   height: 800px;
 
-  }
-  
-.my_plans{
-   background-image: url(background_my_plans.jpg); 
-  height: 800px;
-   width: auto;
-  }
-nav{
+body, html {
+    overflow-x: hidden;
+    background-image: url(img/background.jpg);
+    height: 800px;
+
+}
+
+.my_plans {
+    background-image: url(img/background_my_plans.jpg);
+    height: 1000px;
+    width: auto;
+}
+
+nav {
     margin: 0 auto;
     max-width: 1100px;
     width: 100%;
 }
+
 #checkbox-menu,
-.toggle{
+.toggle {
     display: none;
 }
-.menu{
+
+.menu {
     padding: 0px;
     margin: 0;
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     list-style-type: none;
     background: #000;
 }
-.menu li a{
+
+.menu li a {
     color: white;
     text-decoration: none;
     align-self: center;
@@ -44,49 +49,63 @@ nav{
     padding: 10px 15px;
     transition: background .2s linear;
 }
-.menu li a:hover{
+
+.menu li a:hover {
     background: darkorange;
     border-radius: 3px;
 }
-.menu li a.logo{
-font-size: 21px;
-margin-right: 0px;
-}
-.menu li a.contacts{
+
+.menu li a.logo {
+    font-size: 21px;
     margin-right: 0px;
 }
 
-.wrapper{
+.menu li a.contacts {
+    margin-right: 0px;
+}
+
+.wrapper {
     margin: 0 auto;
     max-width: 1100px;
     width: 100%;
 }
-.intro{
+
+.intro {
     margin-top: 25px;
     display: flex;
     justify-content: flex-end;
 }
-.intro-img{
-    background-image: url(futer.jpg);
-    width: 965px;
-    height: 640px;
+
+.intro-img {
+    /*background-image: url(futer.jpg);*/
+    /*width: 965px;*/
+    /*height: 640px;*/
 }
-.intro.intro-text{
-position: absolute;
-font-size: 62px;
-right:750px;
-top: 220px;
+
+.intro.intro-text {
+    position: absolute;
+    font-size: 62px;
+    right: 750px;
+    top: 220px;
 
 }
+
 .intro-text-My_plans {
-color: white;
-}
-.intro-href{
-    text-decoration: none; 
     color: white;
 }
-.intro-contacts{
-    background-color:darkorange;
+
+.puncts li {
+    color: white;
+    font-size: 30px;
+}
+
+.intro-href {
+    text-decoration: none;
+    color: white;
+}
+
+.intro-contacts {
+    background-color: darkorange;
     max-width: 590px;
     position: absolute;
     right: 170px;
@@ -96,30 +115,118 @@ color: white;
     padding: 30px 50px;
 
 }
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: white;
+}
+.slider .prev,
+.slider .next{
+    height: 50px;
+    width: 50px;
+    size: A3;
+}
+
+/* Заголовок слайда */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+}
+
+
+/* Кружочки */
+
+.slider-dots {
+    text-align: center;
+
+
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.item img {
+    width: 1200px;
+    height: auto;
+    align-self: center;
+    border-radius: 30px;
+    border-bottom-color: black ;
+    padding-left: 50px;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
 @media screen and (max-width: 765px) {
-    .toggle{
+    .toggle {
         clear: both;
         display: block;
         text-align: center;
         font-size: 18px;
         line-height: 40px;
         width: 100%;
-        color:#000;
+        color: #000;
         background: yellow;
         transition: all .1s linear;
     }
-    .toggle:hover{
-       background: yellow; 
+
+    .toggle:hover {
+        background: yellow;
     }
-    #checkbox-menu:checked + label .touch li{
+
+    #checkbox-menu:checked + label .touch li {
         opacity: 1;
         visibility: visible;
-        transition: all.7s linear;
+        transition: all .7s linear;
     }
-    #checkbox-menu:checked + label .touch{
+
+    #checkbox-menu:checked + label .touch {
         height: 350px;
     }
-    .menu{
+
+    .menu {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -127,18 +234,20 @@ color: white;
         height: 0;
         transition: height .3s linear;
     }
-    .menu li{
+
+    .menu li {
         display: flex;
         align-self: center;
-        width: 95%;
+        width: 80%;
         opacity: 0;
         visibility: hidden;
     }
-    .menu li a{
+    .item img{
         width: 95%;
-        text-align: center;
-        align-self: center;
-        align-content: center;
+
+    }
+    .menu li a {
+
     }
 }
 
